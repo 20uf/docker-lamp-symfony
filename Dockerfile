@@ -12,7 +12,7 @@ ENV PHPMYADMIN_VERSION	4.5.0.2
 ENV MAX_UPLOAD			"50M"
 
 # Install MySQL
-RUN apt-get install -y mysql-server mysql-client libmysqlclient-dev
+RUN apt-get install -y wget mysql-server mysql-client libmysqlclient-dev
 
 RUN wget https://files.phpmyadmin.net/phpMyAdmin/${PHPMYADMIN_VERSION}/phpMyAdmin-${PHPMYADMIN_VERSION}-english.tar.bz2 \
  && tar -xvjf /phpMyAdmin-${PHPMYADMIN_VERSION}-english.tar.bz2 -C / \
