@@ -1,5 +1,5 @@
 FROM 20uf/lamp-phpmyadmin
-MAINTAINER Michael COULLERET <michael.coulleret@vesperiagroup.com>
+MAINTAINER Michael COULLERET <michael.coulleret@gmail.com>
 
 RUN apt-get update
 
@@ -33,5 +33,6 @@ RUN sed -i "s/upload_max_filesize = 2M/upload_max_filesize = $MAX_UPLOAD/" /etc/
 RUN sed -i "s/post_max_size = 8M/post_max_size = $MAX_UPLOAD/" /etc/php5/fpm/php.ini
 
 EXPOSE 80
+EXPOSE 3306
 
 CMD phpmyadmin-start

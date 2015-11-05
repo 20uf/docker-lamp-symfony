@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t mcolabs/lamp-symfony .
+
+test:
+  override:
+    - docker run -d -p 80:80 mcolabs/lamp-symfony; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:80
