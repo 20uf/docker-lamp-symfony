@@ -1,4 +1,4 @@
-FROM 20uf/lap-phpmyadmin
+FROM 20uf/lap-symfony
 MAINTAINER Michael COULLERET <michael.coulleret@gmail.com>
 
 RUN apt-get update
