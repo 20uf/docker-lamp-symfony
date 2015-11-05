@@ -1,4 +1,4 @@
-FROM 20uf/lamp-phpmyadmin
+FROM 20uf/lap-phpmyadmin
 MAINTAINER Michael COULLERET <michael.coulleret@gmail.com>
 
 RUN apt-get update
