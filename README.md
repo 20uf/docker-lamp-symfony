@@ -1,7 +1,7 @@
 # lamp-symfony
 Ubuntu, Apache2, PHP and mysql + phpmyadmin
 
-(https://circleci.com/gh/mcolabs/lamp-symfony.svg?style=shield&circle-token=:circle-token)
+![Circle CI](https://circleci.com/gh/mcolabs/lamp-symfony.svg?style=shield&circle-token=:circle-token)
 
 Build image:
 ---------------

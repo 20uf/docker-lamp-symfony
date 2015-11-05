@@ -17,7 +17,6 @@ RUN apt-get install -y wget mysql-server mysql-client libmysqlclient-dev
 RUN wget https://files.phpmyadmin.net/phpMyAdmin/${PHPMYADMIN_VERSION}/phpMyAdmin-${PHPMYADMIN_VERSION}-english.tar.bz2 \
  && tar -xvjf /phpMyAdmin-${PHPMYADMIN_VERSION}-english.tar.bz2 -C / \
  && rm /phpMyAdmin-${PHPMYADMIN_VERSION}-english.tar.bz2 \
- && rm -r /www \
  && mv /phpMyAdmin-${PHPMYADMIN_VERSION}-english /www
 
 ADD template/config.inc.php /
