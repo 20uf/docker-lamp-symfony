@@ -1,5 +1,6 @@
 FROM 20uf/lap-symfony
-MAINTAINER Michael COULLERET <michael.coulleret@gmail.com>
+
+MAINTAINER Michael COULLERET <m@coulleret.pro>
 
 RUN apt-get update
 
@@ -27,10 +28,7 @@ ADD template/phpmyadmin-firstrun /usr/local/bin/
 RUN chmod +x /usr/local/bin/phpmyadmin-start
 RUN chmod +x /usr/local/bin/phpmyadmin-firstrun
 
-#RUN sed -i "s/upload_max_filesize = 2M/upload_max_filesize = $MAX_UPLOAD/" /etc/php5/fpm/php.ini
-#RUN sed -i "s/post_max_size = 8M/post_max_size = $MAX_UPLOAD/" /etc/php5/fpm/php.ini
-
-EXPOSE 80
-EXPOSE 3306
+EXPOSE 80 443 3306
 
 CMD phpmyadmin-start
+
