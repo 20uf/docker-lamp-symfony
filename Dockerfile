@@ -1,6 +1,6 @@
-FROM 20uf/lap-symfony
+FROM 20uf/docker-lamp-symfony
 
-MAINTAINER Michael COULLERET <m@coulleret.pro>
+MAINTAINER Michael COULLERET <michael@coulleret.pro>
 
 RUN apt-get update
 
@@ -9,8 +9,8 @@ ENV PMA_USERNAME        develop
 ENV PMA_PASSWORD        password
 ENV MYSQL_USERNAME      mysql
 ENV MYSQL_PASSWORD      dev
-ENV PHPMYADMIN_VERSION	4.5.0.2
-ENV MAX_UPLOAD			"50M"
+ENV PHPMYADMIN_VERSION	 4.5.0.2
+ENV MAX_UPLOAD			       "50M"
 
 # Install MySQL
 RUN apt-get install -y wget mysql-server mysql-client libmysqlclient-dev
